@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-image: url(img/wheather.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+.app-wrapp {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header input {
+  width: 100%;
+  max-width: 280px;
+  padding: 15px 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 16px 0 16px 0;
+  border: none;
+  outline: none;
+  transition: 0.4s ease-out;
+  color: #111;
+  font-size: 20px;
+  border-bottom: 3px solid coral;
+  font-weight: 500;
+}
+header input:focus {
+  background-color: rgba(255, 255, 255);
+  border-radius: 0 16px 0 16px;
+}
+main {
+  margin-top: 20vh;
+  padding: 25px 25px 59px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.location .city {
+  font-size: 32px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.location .date {
+  color: #fff;
+  font-size: 16px;
+}
+.main-temp .temp {
+  font-size: 100px;
+  font-weight: 900;
+  color: #fff;
+  padding: 30px 0;
+  text-shadow: 8px 10px rgba(0, 0, 0, 0.3);
+}
+.main-temp .weather {
+  font-size: 32px;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 6px 8px rgba(0, 0, 0, 0.9);
+}
+.main-temp .hi-low {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 4px 5px rgba(0, 0, 0, 0.9);
+}
+@media (max-width: 900px) {
+  .app-wrapp {
+    grid-template-columns: 100%;
+  }
+  main {
+    margin-top: 10vh;
+  }
+}
